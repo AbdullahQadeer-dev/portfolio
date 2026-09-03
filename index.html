@@ -334,21 +334,27 @@
             }
         };
         
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            const scrollTop = document.documentElement.scrollTop;
-            const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
-            
-            if (maxScrollTop <= 0) return;
-
-            
-            const scrollFraction = scrollTop / maxScrollTop;
-            const frameIndex = Math.min(
-                frameCount - 1,
-                Math.ceil(scrollFraction * frameCount)
-            ) + 1;
-            
-            requestAnimationFrame(() => updateImage(frameIndex));
-        });
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollTop = document.documentElement.scrollTop;
+                    const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
+                    
+                    if (maxScrollTop > 0) {
+                        const scrollFraction = scrollTop / maxScrollTop;
+                        const frameIndex = Math.min(
+                            frameCount - 1,
+                            Math.ceil(scrollFraction * frameCount)
+                        ) + 1;
+                        
+                        updateImage(frameIndex);
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
 
         // Intersection Observer for Scroll Animations
         const observerOptions = {
