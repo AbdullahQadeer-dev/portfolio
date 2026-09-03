@@ -44,12 +44,16 @@ html {
     overflow: hidden;
     z-index: -1;
     background: #000;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 canvas {
     width: 100vw;
     height: 100dvh;
     object-fit: cover;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 /* Glassmorphism Utility */
@@ -639,6 +643,16 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Disable scroll animations on phone */
+    .animate-on-scroll {
+        opacity: 1;
+        filter: none;
+        transition: none;
+    }
+    .slide-up, .slide-left, .slide-right {
+        transform: none;
+    }
+    
     .projects-grid {
         grid-template-columns: 1fr;
     }
