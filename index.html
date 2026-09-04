@@ -279,14 +279,34 @@
             context.drawImage(img, 0, 0);
         }
         
-        let images = [];
+        let images = []; // Desktop images
+        const mobileImageCache = new Map();
+        
+        const preloadProgressive = (centerIndex) => {
+            const buffer = 15; // Preload 15 frames ahead and behind
+            const start = Math.max(1, centerIndex - buffer);
+            const end = Math.min(frameCount, centerIndex + buffer);
+            
+            for (let i = start; i <= end; i++) {
+                if (!mobileImageCache.has(i)) {
+                    const cachedImg = new Image();
+                    cachedImg.src = currentFrame(i, currentFolder);
+                    mobileImageCache.set(i, cachedImg);
+                }
+            }
+        };
         
         const preloadImages = (folder) => {
-            images = [];
-            for (let i = 1; i <= frameCount; i++) {
-                const cachedImage = new Image();
-                cachedImage.src = currentFrame(i, folder);
-                images.push(cachedImage);
+            if (folder === 'Frames') {
+                images = [];
+                for (let i = 1; i <= frameCount; i++) {
+                    const cachedImage = new Image();
+                    cachedImage.src = currentFrame(i, folder);
+                    images.push(cachedImage);
+                }
+            } else {
+                mobileImageCache.clear();
+                preloadProgressive(1); // Preload near the beginning
             }
         };
         
@@ -335,18 +355,69 @@
             }, 250);
         });
         
-        const updateImage = index => {
-            if (images[index - 1] && images[index - 1].complete && images[index - 1].naturalWidth !== 0) {
-                // Ensure canvas size matches image size without reading from DOM to avoid layout thrashing
-                updateCanvasSize(images[index - 1].width, images[index - 1].height);
-                context.drawImage(images[index - 1], 0, 0);
-            } else {
-                const fallbackImg = new Image();
-                fallbackImg.src = currentFrame(index, currentFolder);
-                fallbackImg.onload = () => {
-                    updateCanvasSize(fallbackImg.width, fallbackImg.height);
-                    context.drawImage(fallbackImg, 0, 0);
+        let targetFrameIndex = 1;
+        let currentRenderedFrame = 0;
+        let isDecoding = false;
+
+        const drawMobileFrame = async (index) => {
+            if (isDecoding) return;
+            
+            const cachedImg = mobileImageCache.get(index);
+            if (!cachedImg) return;
+
+            isDecoding = true;
+            try {
+                if (cachedImg.decode) {
+                    await cachedImg.decode();
+                } else if (!cachedImg.complete) {
+                    await new Promise((resolve, reject) => {
+                        cachedImg.onload = resolve;
+                        cachedImg.onerror = reject;
+                    });
                 }
+                
+                // Only draw if we haven't scrolled past and haven't already rendered it
+                if (targetFrameIndex === index && currentRenderedFrame !== index) {
+                    requestAnimationFrame(() => {
+                        // Don't resize canvas on every frame for mobile
+                        if (currentCanvasWidth === 0 || currentCanvasHeight === 0) {
+                            updateCanvasSize(cachedImg.width, cachedImg.height);
+                        }
+                        context.drawImage(cachedImg, 0, 0);
+                        currentRenderedFrame = index;
+                    });
+                }
+            } catch (e) {
+                // Ignore decode errors
+            } finally {
+                isDecoding = false;
+                // If the target changed while we were decoding, try to draw the new target
+                if (targetFrameIndex !== index && targetFrameIndex !== currentRenderedFrame) {
+                    drawMobileFrame(targetFrameIndex);
+                }
+            }
+        };
+
+        const updateImage = index => {
+            if (currentFolder === 'Frames') {
+                // Existing Desktop Behavior
+                if (images[index - 1] && images[index - 1].complete && images[index - 1].naturalWidth !== 0) {
+                    // Ensure canvas size matches image size without reading from DOM to avoid layout thrashing
+                    updateCanvasSize(images[index - 1].width, images[index - 1].height);
+                    context.drawImage(images[index - 1], 0, 0);
+                } else {
+                    const fallbackImg = new Image();
+                    fallbackImg.src = currentFrame(index, currentFolder);
+                    fallbackImg.onload = () => {
+                        updateCanvasSize(fallbackImg.width, fallbackImg.height);
+                        context.drawImage(fallbackImg, 0, 0);
+                    }
+                }
+            } else {
+                // Mobile Behavior
+                targetFrameIndex = index;
+                preloadProgressive(index);
+                drawMobileFrame(index);
             }
         };
         
