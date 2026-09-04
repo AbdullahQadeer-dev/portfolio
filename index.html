@@ -1,469 +1,642 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah Qadeer - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Background Canvas Animation -->
-    <div class="canvas-container">
-        <canvas id="scroll-animation"></canvas>
-    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abdullah Qadeer - Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- FontAwesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <!-- Background Canvas Animation -->
+        <div class="canvas-container">
+            <canvas id="scroll-animation"></canvas>
+        </div>
 
-    <!-- Content Over Animation -->
-    <div class="container">
-        <!-- Navbar -->
-        <nav class="glass animate-on-scroll slide-up">
-            <div class="nav-content container">
-                <a href="#" class="logo">AQ<span>.</span></a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <a href="#" class="btn btn-outline"><i class="fa-solid fa-download"></i> Download CV</a>
-            </div>
-        </nav>
+        <!-- Content Over Animation -->
+        <div class="container">
+            <!-- Navbar -->
+            <nav class="glass animate-on-scroll slide-up">
+                <div class="nav-content container">
+                    <a href="#" class="logo">AQ<span>.</span></a>
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <a href="#" class="btn btn-outline"><i class="fa-solid fa-download"></i> Download CV</a>
+                </div>
+            </nav>
 
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <div class="hero-text glass animate-on-scroll slide-left">
-                    <div class="badge"><i class="fa-solid fa-circle" style="font-size: 8px; vertical-align: middle;"></i> Available for Opportunities</div>
-                    <h2>Hi, I'm</h2>
-                    <h1>Abdullah <span>Qadeer</span></h1>
-                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;"><b>Software Engineer | Problem Solver | Tech Enthusiast</b></h3>
-                    <p>I build scalable, efficient and user-friendly software solutions that solve real world problems.</p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-right-long"></i></a>
-                        <a href="#contact" class="btn btn-outline">Let's Connect <i class="fa-regular fa-comment-dots"></i></a>
-                    </div>
-                </div>
-                <div class="hero-visuals">
-                    <div class="code-snippet code-1 glass animate-on-scroll slide-right delay-1">
-                        <span class="keyword">function</span> <span class="method">develop</span>() {<br>
-                        &nbsp;&nbsp;<span class="method">eat</span>();<br>
-                        &nbsp;&nbsp;<span class="method">code</span>();<br>
-                        &nbsp;&nbsp;<span class="method">sleep</span>();<br>
-                        &nbsp;&nbsp;<span class="method">repeat</span>();<br>
-                        }
-                    </div>
-                    <div class="code-snippet code-2 glass animate-on-scroll slide-right delay-2">
-                        <span class="keyword">while</span> (building) {<br>
-                        &nbsp;&nbsp;<span class="method">learn</span>();<br>
-                        &nbsp;&nbsp;<span class="method">improve</span>();<br>
-                        &nbsp;&nbsp;<span class="method">ship</span>();<br>
-                        }
-                    </div>
-                    <div class="code-snippet code-3 glass animate-on-scroll slide-right delay-3" style="font-size: 1rem; text-align: center;">
-                        <i class="fa-solid fa-code" style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.5rem;"></i><br>
-                        Building the future<br>
-                        with <span style="color: var(--primary); font-weight: bold;">clean code</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="stats-grid">
-            <div class="stat-card glass animate-on-scroll slide-up delay-1">
-                <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
-                <div class="stat-number">2+</div>
-                <div class="stat-label">Years of Learning</div>
-            </div>
-            <div class="stat-card glass animate-on-scroll slide-up delay-2">
-                <div class="stat-icon"><i class="fa-solid fa-diagram-project"></i></div>
-                <div class="stat-number">25+</div>
-                <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-card glass animate-on-scroll slide-up delay-3">
-                <div class="stat-icon"><i class="fa-solid fa-suitcase"></i></div>
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Technologies</div>
-            </div>
-            <div class="stat-card glass animate-on-scroll slide-up delay-4">
-                <div class="stat-icon"><i class="fa-solid fa-gear"></i></div>
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Dedication</div>
-            </div>
-        </section>
-
-        <!-- About & Tech Stack -->
-        <section id="about" class="about-stack-grid">
-            <div class="about-card glass animate-on-scroll slide-left">
-                <h3 class="section-title"><i class="fa-regular fa-user" style="color: var(--primary);"></i> ABOUT ME</h3>
-                <p>I'm a passionate Software Engineering student who loves building software that makes people's lives easier. I enjoy turning complex problems into simple, beautiful and intuitive solutions.</p>
-                <a href="#" class="btn btn-outline">Read More About Me <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="stack-card glass animate-on-scroll slide-right" id="skills">
-                <h3 class="section-title"><i class="fa-solid fa-layer-group" style="color: var(--primary);"></i> TECH STACK</h3>
-                <div class="tech-grid">
-                    <div class="tech-item"><div class="tech-icon"><i class="fa-brands fa-python fa-2x" style="color: #3776AB;"></i></div><span>Python</span></div>
-                    <div class="tech-item"><div class="tech-icon"><i class="fa-brands fa-js fa-2x" style="color: #F7DF1E;"></i></div><span>JavaScript</span></div>
-                    <div class="tech-item"><div class="tech-icon" style="color: #3178C6; font-weight: bold; font-size: 1.5rem;">TS</div><span>TypeScript</span></div>
-                    <div class="tech-item"><div class="tech-icon"><i class="fa-brands fa-react fa-2x" style="color: #61DAFB;"></i></div><span>React</span></div>
-                    <div class="tech-item"><div class="tech-icon"><i class="fa-brands fa-node-js fa-2x" style="color: #339933;"></i></div><span>Node.js</span></div>
-                    <div class="tech-item"><div class="tech-icon" style="color: #06B6D4;"><i class="fa-solid fa-wind fa-2x"></i></div><span>Tailwind CSS</span></div>
-                    <div class="tech-item"><div class="tech-icon"><i class="fa-solid fa-database fa-2x" style="color: #4479A1;"></i></div><span>MySQL</span></div>
-                    <div class="tech-item"><div class="tech-icon"><i class="fa-brands fa-github fa-2x" style="color: #ffffff;"></i></div><span>Git & GitHub</span></div>
-                    <div class="more-tech">... and more</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects -->
-        <section id="projects">
-            <div class="projects-header glass animate-on-scroll slide-up">
-                <h3 class="section-title" style="margin: 0;">FEATURED PROJECTS</h3>
-                <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 500;">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card glass animate-on-scroll slide-up delay-1">
-                    <div class="project-img" style="background: url('Projects%20thumbnails/Ai%20Virtual%20Assistant.png') center/cover no-repeat;"></div>
-                    <h3>AI Virtual Assistant</h3>
-                    <p>An intelligent virtual assistant powered by AI for personal zproductivity and task automation.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">API</span>
-                    </div>
-                </div>
-                <div class="project-card glass animate-on-scroll slide-up delay-2">
-                    <div class="project-img" style="background: url('Projects%20thumbnails/Netflix%20clone.png') center/cover no-repeat;"></div>
-                    <h3>Netflix Clone</h3>
-                    <p>A visually stunning clone of the Netflix web interface with movie browsing and trailers.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">TMDB</span>
-                    </div>
-                </div>
-                <div class="project-card glass animate-on-scroll slide-up delay-3">
-                    <div class="project-img" style="background: url('Projects%20thumbnails/Spotify%20Clone.png') center/cover no-repeat;"></div>
-                    <h3>Spotify Clone</h3>
-                    <p>A web-based Spotify player clone featuring music playback and a responsive dark UI.</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section id="experience">
-            <div class="projects-header glass animate-on-scroll slide-up">
-                <h3 class="section-title" style="margin: 0;">EXPERIENCE</h3>
-            </div>
-            <div class="experience-timeline glass animate-on-scroll slide-up">
-                <div class="timeline-line"></div>
-                <div class="timeline-item animate-on-scroll slide-left delay-1">
-                    <div class="timeline-icon"><i class="fa-regular fa-calendar"></i></div>
-                    <div class="timeline-content">
-                        <h4>2024</h4>
-                        <p>Started Programming<br>Journey</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll slide-left delay-2">
-                    <div class="timeline-icon"><i class="fa-solid fa-file-code"></i></div>
-                    <div class="timeline-content">
-                        <h4>2024 - 2025</h4>
-                        <p>Built Many Projects &<br>Explored Development</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll slide-left delay-3">
-                    <div class="timeline-icon"><i class="fa-solid fa-calendar-check"></i></div>
-                    <div class="timeline-content">
-                        <h4>2026 - Present</h4>
-                        <p>Learning Advanced<br>Technologies</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll slide-left delay-4">
-                    <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
-                    <div class="timeline-content">
-                        <h4>Future</h4>
-                        <p>Building Scalable Solutions<br>& Helping Others</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="contact-grid">
-            <div class="contact-card glass animate-on-scroll slide-left" style="display: flex; flex-direction: column; justify-content: center;">
-                <i class="fa-solid fa-rocket fa-4x" style="color: var(--primary); margin-bottom: 1.5rem;"></i>
-                <h1 class="contact-title">LET'S WORK<br><span style="color: var(--primary);">TOGETHER!</span></h1>
-                <p style="color: var(--text-light); margin-bottom: 2rem; max-width: 400px;">I'm currently available for new opportunities and exciting projects. Let's build something amazing together!</p>
-                <div style="display: flex; gap: 1rem; font-size: 1.5rem;">
-                    <a href="https://github.com/AbdullahQadeer-dev" target="_blank" style="color: var(--primary);"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/muhammad-abdullah-qadeer" target="_blank" style="color: var(--primary);"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/_abdullahqadeerdev" target="_blank" style="color: var(--primary);"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="contact-card glass animate-on-scroll slide-right">
-                <div class="contact-info" style="margin-bottom: 2rem;">
-                      <div class="info-item">
-                          <div class="info-icon"><a href="mailto:abdullahqadeerms@gmail.com" style="color: inherit;"><i class="fa-regular fa-envelope"></i></a></div>
-                          <div class="info-text">
-                              <h4>Email</h4>
-                              <p><a href="mailto:abdullahqadeerms@gmail.com" style="color: inherit; text-decoration: none;">abdullahqadeerms@gmail.com</a></p>
-                          </div>
-                      </div>
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <div class="info-text">
-                            <h4>Location</h4>
-                            <p>Jaranwala, Pakistan</p>
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <div class="hero-text glass animate-on-scroll slide-left">
+                        <div class="badge"><i class="fa-solid fa-circle" style="font-size: 8px; vertical-align: middle;"></i> Available for Opportunities</div>
+                        <h2>Hi, I'm</h2>
+                        <h1>Abdullah <span>Qadeer</span></h1>
+                        <h3 style="color: var(--text-dark); margin-bottom: 1rem;"><b>Software Engineer | Problem Solver | Tech Enthusiast</b></h3>
+                        <p>I build scalable, efficient and user-friendly software solutions that solve real world problems.</p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-right-long"></i></a>
+                            <a href="#contact" class="btn btn-outline">Let's Connect <i class="fa-regular fa-comment-dots"></i></a>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
-                        <div class="info-text">
-                            <h4>Phone</h4>
-                            <p>+92 3096170324</p>
+                    <div class="hero-visuals">
+                        <div class="code-snippet code-1 glass animate-on-scroll slide-right delay-1">
+                            <span class="keyword">function</span> <span class="method">develop</span>() {<br>
+                            &nbsp;&nbsp;<span class="method">eat</span>();<br>
+                            &nbsp;&nbsp;<span class="method">code</span>();<br>
+                            &nbsp;&nbsp;<span class="method">sleep</span>();<br>
+                            &nbsp;&nbsp;<span class="method">repeat</span>();<br>
+                            }
+                        </div>
+                        <div class="code-snippet code-2 glass animate-on-scroll slide-right delay-2">
+                            <span class="keyword">while</span> (building) {<br>
+                            &nbsp;&nbsp;<span class="method">learn</span>();<br>
+                            &nbsp;&nbsp;<span class="method">improve</span>();<br>
+                            &nbsp;&nbsp;<span class="method">ship</span>();<br>
+                            }
+                        </div>
+                        <div class="code-snippet code-3 glass animate-on-scroll slide-right delay-3" style="font-size: 1rem; text-align: center;">
+                            <i class="fa-solid fa-code" style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.5rem;"></i><br>
+                            Building the future<br>
+                            with <span style="color: var(--primary); font-weight: bold;">clean code</span>
                         </div>
                     </div>
                 </div>
+            </section>
 
-            </div>
-        </section>
+            <!-- Stats Section -->
+            <section class="stats-grid">
+                <div class="stat-card glass animate-on-scroll slide-up delay-1">
+                    <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Years of Learning</div>
+                </div>
+                <div class="stat-card glass animate-on-scroll slide-up delay-2">
+                    <div class="stat-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card glass animate-on-scroll slide-up delay-3">
+                    <div class="stat-icon"><i class="fa-solid fa-suitcase"></i></div>
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Technologies</div>
+                </div>
+                <div class="stat-card glass animate-on-scroll slide-up delay-4">
+                    <div class="stat-icon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Dedication</div>
+                </div>
+            </section>
 
-        <!-- Footer -->
-        <footer class="glass animate-on-scroll slide-up" style="border-radius: 1rem 1rem 0 0; margin-bottom: 0;">
-            <div class="footer-content container">
-                <p>&copy; 2026 Abdullah Qadeer. All rights reserved.</p>
-                <div style="color: var(--primary); font-size: 1.5rem;"><i class="fa-solid fa-code"></i></div>
-                <a href="#home" class="btn btn-primary" style="padding: 0.75rem 1rem; border-radius: 50%;"><i class="fa-solid fa-arrow-up"></i></a>
-            </div>
-        </footer>
-    </div>
+            <!-- About & Tech Stack -->
+            <section id="about" class="about-stack-grid">
+                <div class="about-card glass animate-on-scroll slide-left">
+                    <h3 class="section-title"><i class="fa-regular fa-user" style="color: var(--primary);"></i> ABOUT ME</h3>
+                    <p>I'm a passionate Software Engineering student who loves building software that makes people's lives easier. I enjoy turning complex problems into simple, beautiful and intuitive solutions.</p>
+                    <a href="#" class="btn btn-outline">Read More About Me <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="stack-card glass animate-on-scroll slide-right" id="skills">
+                    <h3 class="section-title"><i class="fa-solid fa-layer-group" style="color: var(--primary);"></i> TECH STACK</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item"><div class="tech-icon"><i class="fa-brands fa-python fa-2x" style="color: #3776AB;"></i></div><span>Python</span></div>
+                        <div class="tech-item"><div class="tech-icon"><i class="fa-brands fa-js fa-2x" style="color: #F7DF1E;"></i></div><span>JavaScript</span></div>
+                        <div class="tech-item"><div class="tech-icon" style="color: #3178C6; font-weight: bold; font-size: 1.5rem;">TS</div><span>TypeScript</span></div>
+                        <div class="tech-item"><div class="tech-icon"><i class="fa-brands fa-react fa-2x" style="color: #61DAFB;"></i></div><span>React</span></div>
+                        <div class="tech-item"><div class="tech-icon"><i class="fa-brands fa-node-js fa-2x" style="color: #339933;"></i></div><span>Node.js</span></div>
+                        <div class="tech-item"><div class="tech-icon" style="color: #06B6D4;"><i class="fa-solid fa-wind fa-2x"></i></div><span>Tailwind CSS</span></div>
+                        <div class="tech-item"><div class="tech-icon"><i class="fa-solid fa-database fa-2x" style="color: #4479A1;"></i></div><span>MySQL</span></div>
+                        <div class="tech-item"><div class="tech-icon"><i class="fa-brands fa-github fa-2x" style="color: #ffffff;"></i></div><span>Git & GitHub</span></div>
+                        <div class="more-tech">... and more</div>
+                    </div>
+                </div>
+            </section>
 
-    <script>
-        const canvas = document.getElementById('scroll-animation');
-        const context = canvas.getContext('2d');
-        
-        const frameCount = 240;
-        
-        // Determine folder based on screen width
-        const getFrameFolder = () => window.innerWidth <= 768 ? 'Potrait Frames' : 'Frames';
-        let currentFolder = getFrameFolder();
-        
-        const currentFrame = (index, folder) => (
-            `${folder}/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`
-        );
-        
-        let currentCanvasWidth = 0;
-        let currentCanvasHeight = 0;
-        
-        const updateCanvasSize = (width, height) => {
-            if (currentCanvasWidth !== width || currentCanvasHeight !== height) {
-                canvas.width = width;
-                canvas.height = height;
-                currentCanvasWidth = width;
-                currentCanvasHeight = height;
-            }
-        };
+            <!-- Featured Projects -->
+            <section id="projects">
+                <div class="projects-header glass animate-on-scroll slide-up">
+                    <h3 class="section-title" style="margin: 0;">FEATURED PROJECTS</h3>
+                    <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 500;">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card glass animate-on-scroll slide-up delay-1">
+                        <div class="project-img" style="background: url('Projects%20thumbnails/Ai%20Virtual%20Assistant.png') center/cover no-repeat;"></div>
+                        <h3>AI Virtual Assistant</h3>
+                        <p>An intelligent virtual assistant powered by AI for personal zproductivity and task automation.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                    <div class="project-card glass animate-on-scroll slide-up delay-2">
+                        <div class="project-img" style="background: url('Projects%20thumbnails/Netflix%20clone.png') center/cover no-repeat;"></div>
+                        <h3>Netflix Clone</h3>
+                        <p>A visually stunning clone of the Netflix web interface with movie browsing and trailers.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">TMDB</span>
+                        </div>
+                    </div>
+                    <div class="project-card glass animate-on-scroll slide-up delay-3">
+                        <div class="project-img" style="background: url('Projects%20thumbnails/Spotify%20Clone.png') center/cover no-repeat;"></div>
+                        <h3>Spotify Clone</h3>
+                        <p>A web-based Spotify player clone featuring music playback and a responsive dark UI.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        const img = new Image();
-        img.src = currentFrame(1, currentFolder);
-        img.onload = function() {
-            updateCanvasSize(img.width, img.height);
-            context.drawImage(img, 0, 0);
-        }
-        
-        let images = []; // Desktop images
-        const mobileImageCache = new Map();
-        
-        const preloadProgressive = (centerIndex) => {
-            const buffer = 15; // Preload 15 frames ahead and behind
-            const start = Math.max(1, centerIndex - buffer);
-            const end = Math.min(frameCount, centerIndex + buffer);
+            <!-- Experience -->
+            <section id="experience">
+                <div class="projects-header glass animate-on-scroll slide-up">
+                    <h3 class="section-title" style="margin: 0;">EXPERIENCE</h3>
+                </div>
+                <div class="experience-timeline glass animate-on-scroll slide-up">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item animate-on-scroll slide-left delay-1">
+                        <div class="timeline-icon"><i class="fa-regular fa-calendar"></i></div>
+                        <div class="timeline-content">
+                            <h4>2024</h4>
+                            <p>Started Programming<br>Journey</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll slide-left delay-2">
+                        <div class="timeline-icon"><i class="fa-solid fa-file-code"></i></div>
+                        <div class="timeline-content">
+                            <h4>2024 - 2025</h4>
+                            <p>Built Many Projects &<br>Explored Development</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll slide-left delay-3">
+                        <div class="timeline-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div class="timeline-content">
+                            <h4>2026 - Present</h4>
+                            <p>Learning Advanced<br>Technologies</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll slide-left delay-4">
+                        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="timeline-content">
+                            <h4>Future</h4>
+                            <p>Building Scalable Solutions<br>& Helping Others</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="contact-grid">
+                <div class="contact-card glass animate-on-scroll slide-left" style="display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fa-solid fa-rocket fa-4x" style="color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h1 class="contact-title">LET'S WORK<br><span style="color: var(--primary);">TOGETHER!</span></h1>
+                    <p style="color: var(--text-light); margin-bottom: 2rem; max-width: 400px;">I'm currently available for new opportunities and exciting projects. Let's build something amazing together!</p>
+                    <div style="display: flex; gap: 1rem; font-size: 1.5rem;">
+                        <a href="https://github.com/AbdullahQadeer-dev" target="_blank" style="color: var(--primary);"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muhammad-abdullah-qadeer" target="_blank" style="color: var(--primary);"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/_abdullahqadeerdev" target="_blank" style="color: var(--primary);"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-card glass animate-on-scroll slide-right">
+                    <div class="contact-info" style="margin-bottom: 2rem;">
+                        <div class="info-item">
+                            <div class="info-icon"><a href="mailto:abdullahqadeerms@gmail.com" style="color: inherit;"><i class="fa-regular fa-envelope"></i></a></div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:abdullahqadeerms@gmail.com" style="color: inherit; text-decoration: none;">abdullahqadeerms@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-text">
+                                <h4>Location</h4>
+                                <p>Jaranwala, Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-text">
+                                <h4>Phone</h4>
+                                <p>+92 3096170324</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="glass animate-on-scroll slide-up" style="border-radius: 1rem 1rem 0 0; margin-bottom: 0;">
+                <div class="footer-content container">
+                    <p>&copy; 2026 Abdullah Qadeer. All rights reserved.</p>
+                    <div style="color: var(--primary); font-size: 1.5rem;"><i class="fa-solid fa-code"></i></div>
+                    <a href="#home" class="btn btn-primary" style="padding: 0.75rem 1rem; border-radius: 50%;"><i class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </footer>
+        </div>
+
+        <script>
+            const canvas = document.getElementById('scroll-animation');
+            const context = canvas.getContext('2d');
             
-            for (let i = start; i <= end; i++) {
-                if (!mobileImageCache.has(i)) {
-                    const cachedImg = new Image();
-                    cachedImg.src = currentFrame(i, currentFolder);
-                    mobileImageCache.set(i, cachedImg);
-                }
-            }
-        };
-        
-        const preloadImages = (folder) => {
-            if (folder === 'Frames') {
-                images = [];
-                for (let i = 1; i <= frameCount; i++) {
-                    const cachedImage = new Image();
-                    cachedImage.src = currentFrame(i, folder);
-                    images.push(cachedImage);
-                }
-            } else {
-                mobileImageCache.clear();
-                preloadProgressive(1); // Preload near the beginning
-            }
-        };
-        
-        preloadImages(currentFolder);
-        
-        // Cache maxScrollTop to avoid forced layout calculations on scroll
-        let maxScrollTop = 0;
-        const updateScrollMax = () => {
-            maxScrollTop = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-        };
-        
-        // Use ResizeObserver for accurate document height changes without thrashing on scroll
-        const resizeObserver = new ResizeObserver(updateScrollMax);
-        resizeObserver.observe(document.body);
-        window.addEventListener('resize', updateScrollMax);
-        window.addEventListener('load', updateScrollMax);
-        updateScrollMax();
-        
-        // Handle screen resizing (switching between portrait and landscape)
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                const newFolder = getFrameFolder();
-                if (newFolder !== currentFolder) {
-                    currentFolder = newFolder;
-                    preloadImages(currentFolder);
+            const frameCount = 240;
+            
+            // Determine folder based on screen width
+            const getFrameFolder = () => window.innerWidth <= 768 ? 'Potrait Frames' : 'Frames';
+            let currentFolder = getFrameFolder();
+            
+            const currentFrame = (index, folder) => (
+                `${folder}/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`
+            );
+            
+            let currentCanvasWidth = 0;
+            let currentCanvasHeight = 0;
+            
+            const updateCanvasSize = (imgWidth, imgHeight, isMobile) => {
+                if (isMobile) {
+                    // Optimize mobile canvas backing resolution
+                    const maxDimension = 900; // max dimension to prevent huge memory usage
+                    const dpr = Math.min(window.devicePixelRatio || 1, 2);
                     
-                    const scrollTop = document.documentElement.scrollTop;
-                    let frameIndex = 1;
-                    if (maxScrollTop > 0) {
-                        const scrollFraction = scrollTop / maxScrollTop;
-                        frameIndex = Math.min(
-                            frameCount - 1,
-                            Math.ceil(scrollFraction * frameCount)
-                        ) + 1;
+                    let backingWidth = Math.min(imgWidth, window.innerWidth * dpr, maxDimension);
+                    let backingHeight = backingWidth * (imgHeight / imgWidth);
+                    
+                    // Round to integer pixels
+                    backingWidth = Math.floor(backingWidth);
+                    backingHeight = Math.floor(backingHeight);
+
+                    if (currentCanvasWidth !== backingWidth || currentCanvasHeight !== backingHeight) {
+                        canvas.width = backingWidth;
+                        canvas.height = backingHeight;
+                        currentCanvasWidth = backingWidth;
+                        currentCanvasHeight = backingHeight;
                     }
-                    
-                    const newImg = new Image();
-                    newImg.src = currentFrame(frameIndex, currentFolder);
-                    newImg.onload = function() {
-                        updateCanvasSize(newImg.width, newImg.height);
-                        context.drawImage(newImg, 0, 0);
-                    };
+                } else {
+                    if (currentCanvasWidth !== imgWidth || currentCanvasHeight !== imgHeight) {
+                        canvas.width = imgWidth;
+                        canvas.height = imgHeight;
+                        currentCanvasWidth = imgWidth;
+                        currentCanvasHeight = imgHeight;
+                    }
                 }
-            }, 250);
-        });
-        
-        let targetFrameIndex = 1;
-        let currentRenderedFrame = 0;
-        let isDecoding = false;
+            };
 
-        const drawMobileFrame = async (index) => {
-            if (isDecoding) return;
+            let images = []; // Desktop images
+            const mobileImageCache = new Map(); // Map<number, { image, state }>
             
-            const cachedImg = mobileImageCache.get(index);
-            if (!cachedImg) return;
+            let targetFrameIndex = 1;
+            let currentRenderedFrame = 0;
+            let lastFrameIndex = 1;
+            let scrollDirection = 1; // 1 for forward, -1 for backward
 
-            isDecoding = true;
-            try {
-                if (cachedImg.decode) {
-                    await cachedImg.decode();
-                } else if (!cachedImg.complete) {
-                    await new Promise((resolve, reject) => {
-                        cachedImg.onload = resolve;
-                        cachedImg.onerror = reject;
-                    });
+            // TEMPORARY DEBUG PERFORMANCE LOGGING
+            const DEBUG_MODE = true;
+            const debugStats = {
+                targetFrame: 1,
+                renderedFrame: 0,
+                cachedFrames: 0,
+                loadingFrames: 0,
+                decodingFrames: 0,
+                lastLoadTime: 0,
+                lastDecodeTime: 0
+            };
+
+            if (DEBUG_MODE) {
+                const debugContainer = document.createElement('div');
+                debugContainer.style.cssText = 'position:fixed;top:10px;right:10px;background:rgba(0,0,0,0.8);color:#0f0;padding:10px;font-family:monospace;z-index:9999;font-size:12px;pointer-events:none;border-radius:5px;line-height:1.5;';
+                document.body.appendChild(debugContainer);
+                
+                setInterval(() => {
+                    debugStats.cachedFrames = mobileImageCache.size;
+                    let loading = 0;
+                    let decoding = 0;
+                    for (let [, data] of mobileImageCache) {
+                        if (data.state === 'loading') loading++;
+                        if (data.state === 'decoding') decoding++;
+                    }
+                    debugStats.loadingFrames = loading;
+                    debugStats.decodingFrames = decoding;
+                    
+                    debugContainer.innerHTML = `
+                        Target Frame: ${debugStats.targetFrame}<br>
+                        Rendered Frame: ${debugStats.renderedFrame}<br>
+                        Cached Frames: ${debugStats.cachedFrames}<br>
+                        Loading Frames: ${debugStats.loadingFrames}<br>
+                        Decoding Frames: ${debugStats.decodingFrames}<br>
+                        Last Load: ${debugStats.lastLoadTime.toFixed(1)}ms<br>
+                        Last Decode: ${debugStats.lastDecodeTime.toFixed(1)}ms
+                    `;
+                }, 100);
+            }
+
+            const requestIdle = window.requestIdleCallback || ((cb) => setTimeout(() => cb({ timeRemaining: () => 50 }), 1));
+
+            // Priority-based frame scheduler
+            const prioritizeFrames = (targetIndex) => {
+                const queue = [];
+                const pushIfValid = (idx, priority) => {
+                    if (idx >= 1 && idx <= frameCount && idx !== targetIndex) {
+                        queue.push({ index: idx, priority });
+                    }
+                };
+
+                if (scrollDirection > 0) {
+                    for(let i = 1; i <= 5; i++) pushIfValid(targetIndex + i, 1);
+                    for(let i = 1; i <= 3; i++) pushIfValid(targetIndex - i, 2);
+                    for(let i = 6; i <= 15; i++) pushIfValid(targetIndex + i, 3);
+                    for(let i = 4; i <= 10; i++) pushIfValid(targetIndex - i, 4);
+                } else {
+                    for(let i = 1; i <= 5; i++) pushIfValid(targetIndex - i, 1);
+                    for(let i = 1; i <= 3; i++) pushIfValid(targetIndex + i, 2);
+                    for(let i = 6; i <= 15; i++) pushIfValid(targetIndex - i, 3);
+                    for(let i = 4; i <= 10; i++) pushIfValid(targetIndex + i, 4);
+                }
+
+                queue.sort((a, b) => a.priority - b.priority);
+                return queue;
+            };
+
+            const evictOldFrames = (targetIndex) => {
+                const MAX_CACHE_SIZE = 50;
+                if (mobileImageCache.size <= MAX_CACHE_SIZE) return;
+
+                for (const [index, cacheData] of mobileImageCache.entries()) {
+                    if (cacheData.state === 'loading' || cacheData.state === 'decoding') continue;
+                    
+                    if (Math.abs(index - targetIndex) > 25) {
+                        cacheData.image.src = ''; // help GC
+                        mobileImageCache.delete(index);
+                    }
+                }
+            };
+
+            let idlePreloadScheduled = false;
+            const processBackgroundQueue = (targetIndex) => {
+                if (idlePreloadScheduled) return;
+                idlePreloadScheduled = true;
+                
+                requestIdle((deadline) => {
+                    idlePreloadScheduled = false;
+                    
+                    evictOldFrames(targetIndex);
+                    
+                    const queue = prioritizeFrames(targetIndex);
+                    for (const item of queue) {
+                        if (deadline.timeRemaining() < 5) break; 
+                        loadFrameState(item.index);
+                    }
+                });
+            };
+
+            const loadFrameState = (index) => {
+                if (mobileImageCache.has(index)) {
+                    return mobileImageCache.get(index);
                 }
                 
-                // Only draw if we haven't scrolled past and haven't already rendered it
-                if (targetFrameIndex === index && currentRenderedFrame !== index) {
-                    requestAnimationFrame(() => {
-                        // Don't resize canvas on every frame for mobile
-                        if (currentCanvasWidth === 0 || currentCanvasHeight === 0) {
-                            updateCanvasSize(cachedImg.width, cachedImg.height);
+                const img = new Image();
+                const entry = { image: img, state: 'loading' };
+                mobileImageCache.set(index, entry);
+                
+                img.src = currentFrame(index, currentFolder);
+                
+                if (img.complete && img.naturalWidth !== 0) {
+                    entry.state = 'loaded';
+                } else {
+                    img.onload = () => {
+                        if (entry.state === 'loading') {
+                            entry.state = 'loaded';
                         }
-                        context.drawImage(cachedImg, 0, 0);
+                    };
+                    img.onerror = () => {
+                        entry.state = 'error';
+                    };
+                }
+                
+                return entry;
+            };
+
+            const drawMobileFrame = async (index) => {
+                debugStats.targetFrame = index;
+                const startTime = performance.now();
+                
+                const entry = loadFrameState(index);
+                
+                // Trigger background loading of nearby frames without blocking
+                processBackgroundQueue(index);
+                
+                // If a new frame was requested while we were setting this up, abort
+                if (targetFrameIndex !== index) return;
+                
+                if (entry.state === 'loading') {
+                    try {
+                        await new Promise((resolve, reject) => {
+                            const img = entry.image;
+                            if (img.complete) {
+                                resolve();
+                            } else {
+                                const oldOnLoad = img.onload;
+                                const oldOnError = img.onerror;
+                                img.onload = () => {
+                                    if (oldOnLoad) oldOnLoad();
+                                    resolve();
+                                };
+                                img.onerror = (err) => {
+                                    if (oldOnError) oldOnError(err);
+                                    reject(err);
+                                };
+                            }
+                        });
+                        entry.state = 'loaded';
+                    } catch (e) {
+                        entry.state = 'error';
+                        return;
+                    }
+                }
+                
+                debugStats.lastLoadTime = performance.now() - startTime;
+                
+                // If a newer frame was requested while we were waiting to load, abort
+                if (targetFrameIndex !== index) return;
+                
+                if (entry.state === 'loaded') {
+                    entry.state = 'decoding';
+                    const decodeStart = performance.now();
+                    try {
+                        if (entry.image.decode) {
+                            await entry.image.decode();
+                        }
+                        entry.state = 'decoded';
+                    } catch (e) {
+                        entry.state = 'error';
+                    }
+                    debugStats.lastDecodeTime = performance.now() - decodeStart;
+                }
+                
+                // Final check: latest target wins
+                if (targetFrameIndex !== index) return;
+                
+                if (entry.state === 'decoded' && currentRenderedFrame !== index) {
+                    requestAnimationFrame(() => {
+                        // Check again right before drawing just in case
+                        if (targetFrameIndex !== index) return;
+                        
+                        updateCanvasSize(entry.image.width, entry.image.height, true);
+                        // Draw with width and height scaling automatically to the canvas backing store
+                        context.drawImage(entry.image, 0, 0, canvas.width, canvas.height);
                         currentRenderedFrame = index;
+                        debugStats.renderedFrame = index;
                     });
                 }
-            } catch (e) {
-                // Ignore decode errors
-            } finally {
-                isDecoding = false;
-                // If the target changed while we were decoding, try to draw the new target
-                if (targetFrameIndex !== index && targetFrameIndex !== currentRenderedFrame) {
-                    drawMobileFrame(targetFrameIndex);
-                }
-            }
-        };
+            };
 
-        const updateImage = index => {
-            if (currentFolder === 'Frames') {
-                // Existing Desktop Behavior
-                if (images[index - 1] && images[index - 1].complete && images[index - 1].naturalWidth !== 0) {
-                    // Ensure canvas size matches image size without reading from DOM to avoid layout thrashing
-                    updateCanvasSize(images[index - 1].width, images[index - 1].height);
-                    context.drawImage(images[index - 1], 0, 0);
-                } else {
-                    const fallbackImg = new Image();
-                    fallbackImg.src = currentFrame(index, currentFolder);
-                    fallbackImg.onload = () => {
-                        updateCanvasSize(fallbackImg.width, fallbackImg.height);
-                        context.drawImage(fallbackImg, 0, 0);
+            const updateImage = index => {
+                if (currentFolder === 'Frames') {
+                    // Desktop Behavior
+                    if (images[index - 1] && images[index - 1].complete && images[index - 1].naturalWidth !== 0) {
+                        updateCanvasSize(images[index - 1].width, images[index - 1].height, false);
+                        context.drawImage(images[index - 1], 0, 0, canvas.width, canvas.height);
+                    } else {
+                        const fallbackImg = new Image();
+                        fallbackImg.src = currentFrame(index, currentFolder);
+                        fallbackImg.onload = () => {
+                            updateCanvasSize(fallbackImg.width, fallbackImg.height, false);
+                            context.drawImage(fallbackImg, 0, 0, canvas.width, canvas.height);
+                        }
                     }
+                } else {
+                    // Mobile Behavior
+                    scrollDirection = index > lastFrameIndex ? 1 : (index < lastFrameIndex ? -1 : scrollDirection);
+                    lastFrameIndex = index;
+                    targetFrameIndex = index;
+                    drawMobileFrame(index);
                 }
-            } else {
-                // Mobile Behavior
-                targetFrameIndex = index;
-                preloadProgressive(index);
-                drawMobileFrame(index);
+            };
+
+            const preloadImages = (folder) => {
+                if (folder === 'Frames') {
+                    images = [];
+                    for (let i = 1; i <= frameCount; i++) {
+                        const cachedImage = new Image();
+                        cachedImage.src = currentFrame(i, folder);
+                        images.push(cachedImage);
+                    }
+                } else {
+                    mobileImageCache.clear();
+                    // Load and display first frame immediately
+                    targetFrameIndex = 1;
+                    drawMobileFrame(1);
+                }
+            };
+            
+            // Initial setup for the first frame
+            const initImg = new Image();
+            initImg.src = currentFrame(1, currentFolder);
+            initImg.onload = function() {
+                updateCanvasSize(initImg.width, initImg.height, currentFolder !== 'Frames');
+                context.drawImage(initImg, 0, 0, canvas.width, canvas.height);
+                // Start preload sequence after first image is ready
+                preloadImages(currentFolder);
             }
-        };
-        
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scrollTop = document.documentElement.scrollTop;
-                    
-                    if (maxScrollTop > 0) {
-                        const scrollFraction = scrollTop / maxScrollTop;
-                        const frameIndex = Math.min(
-                            frameCount - 1,
-                            Math.ceil(scrollFraction * frameCount)
-                        ) + 1;
+
+            // Cache maxScrollTop
+            let maxScrollTop = 0;
+            const updateScrollMax = () => {
+                maxScrollTop = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+            };
+            
+            // Fix Mobile Viewport Resize Behavior
+            let lastInnerWidth = window.innerWidth;
+            const resizeObserver = new ResizeObserver(() => {
+                updateScrollMax();
+            });
+            resizeObserver.observe(document.body);
+            window.addEventListener('load', updateScrollMax);
+            
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                updateScrollMax();
+                
+                // Only reset the pipeline if the width changed significantly (e.g. orientation change)
+                // This prevents address bar auto-hiding from thrashing the animation cache
+                if (Math.abs(window.innerWidth - lastInnerWidth) > 50) {
+                    lastInnerWidth = window.innerWidth;
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(() => {
+                        const newFolder = getFrameFolder();
+                        if (newFolder !== currentFolder) {
+                            currentFolder = newFolder;
+                            preloadImages(currentFolder);
+                        }
+                        
+                        const scrollTop = document.documentElement.scrollTop;
+                        let frameIndex = 1;
+                        if (maxScrollTop > 0) {
+                            const scrollFraction = scrollTop / maxScrollTop;
+                            frameIndex = Math.min(
+                                frameCount - 1,
+                                Math.ceil(scrollFraction * frameCount)
+                            ) + 1;
+                        }
                         
                         updateImage(frameIndex);
-                    }
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        }, { passive: true });
-
-        // Intersection Observer for Scroll Animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show-element');
-                    // Optional: Unobserve if you only want the animation to happen once
-                    // observer.unobserve(entry.target);
-                } else {
-                    // Remove class when out of view so it animates again when scrolling back
-                    entry.target.classList.remove('show-element');
+                    }, 250);
                 }
             });
-        }, observerOptions);
+            
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        const scrollTop = document.documentElement.scrollTop;
+                        
+                        if (maxScrollTop > 0) {
+                            const scrollFraction = scrollTop / maxScrollTop;
+                            const frameIndex = Math.min(
+                                frameCount - 1,
+                                Math.ceil(scrollFraction * frameCount)
+                            ) + 1;
+                            
+                            updateImage(frameIndex);
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
 
-        document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
+            // Intersection Observer for Scroll Animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show-element');
+                        // Optional: Unobserve if you only want the animation to happen once
+                        // observer.unobserve(entry.target);
+                    } else {
+                        // Remove class when out of view so it animates again when scrolling back
+                        entry.target.classList.remove('show-element');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+                observer.observe(el);
+            });
+        </script>
+    </body>
+    </html>
